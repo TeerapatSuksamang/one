@@ -1,0 +1,220 @@
+@font-face {
+    font-family: "Prompt";
+    src: url("../font/Prompt-Regular.ttf") format("truetype");
+}
+
+*{
+    font-family: "Prompt";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.pro-brand{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 1rem 0 0;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    background-color: #fff;
+}
+
+.hover-img{
+    overflow: hidden;
+}
+
+.hover-img img{
+    transition: all .5s;
+}
+
+.hover-img:hover img{
+    transform: scale(1.05);
+}
+
+.link-img{
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.banner{
+    width: 100%;
+    height: 60vh;
+    border-radius: 0 0 150px;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.box *{
+    display: inline-block;
+}
+
+.st:active{
+    box-shadow: none !important;
+}
+
+.scroll{
+    overflow-x: scroll;
+    display: flex;
+}
+
+.scroll::-webkit-scrollbar{
+    height: 0;
+}
+
+.carousel-item{
+    height: 100vh;
+    object-fit: cover;
+    object-position: center center;
+    background-size: cover;
+}
+
+.bg-img-1{
+    background-image: url("../img/Savory food/1.jpg");
+}
+
+.bg-img-2{
+    background-image: url("../img/sushi/ca-creative-bpPTlXWTOvg-unsplash.jpg");
+}
+
+.bg-img-3{
+    background-image: url("../img/sushi/mahmoud-fawzy-YnVaHqgpPLA-unsplash.jpg");
+}
+
+.dark-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.700), rgba(255, 255, 255, 0.11));
+    z-index: 1;
+}
+
+/* ----- NEW ----- */ 
+
+/* แบบตรงกลาง */
+.we-toastt{
+    z-index: 1000 !important;
+    left: 50%;
+    /* top: -100%; */
+    transform: translateX(-50%);
+    animation: test 4s ease forwards;
+}
+
+@keyframes test {
+    0%{
+        top: -50%;
+    }
+    10%{
+        top: 13%;
+    }
+    13%{
+        top: 10%;
+    }
+    
+    87%{
+        top: 10%;
+    }
+    90%{
+        top: 13%;
+    }
+    100%{
+        top: -50%;
+    }
+}
+
+/* แสดง animation ของ toast */
+
+.we-toast{
+    opacity: 0;
+    animation: a 4s forwards;
+}
+
+@keyframes a {
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}  
+/* ------ */
+
+/* ปุ่มซ่อน */
+.we-hide{
+    opacity: 1;
+    animation: hide .3s forwards ease;
+}
+
+/* @keyframes hide {
+    to{
+        opacity: 0;
+        display: none;
+    }
+} */
+@keyframes hide {
+    0%{
+        top: 10%;
+    }
+    50%{
+        top: 13%;
+    }
+    100%{
+        top: -50%;
+    }
+}
+/* toast hidden */
+
+/* time */
+.timer-container {
+    width: 100%;         
+    height: 3px;
+}
+  
+
+.timer { 
+    height: 100%;        
+    width: 100%;
+    background-color: #4caf50; 
+    animation: time 3.5s linear forwards;
+}
+
+@keyframes time {
+    to {
+        width: 0%;
+    }
+}
+/* time */
+
+
+/* fav btn */
+.fav{
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+    transition: all .3s;
+}
+
+.fav:hover{
+    transform: scale(1.1) !important;
+    color: red;
+}

@@ -1,0 +1,61 @@
+/* แสดง animation ของ toast */
+/* 
+    HTML จะเป็น
+    <div class="toast fade show position-fixed bottom-0 end-0 m-3 we-toast shadow bg-light">
+    position-fixed bottom-0 end-0 = เหมือนกับตะกร้า
+*/
+.we-toast{
+    opacity: 0;
+    animation: a 4s forwards;
+}
+
+@keyframes a {
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}  
+/* ------ */
+
+/* ปุ่มซ่อน */
+.we-hide{
+    opacity: 1;
+    animation: hide .3s forwards ease;
+}
+
+@keyframes hide {
+    to{
+        opacity: 0;
+        display: none;
+    }
+}
+/* ------- */
+
+/* จับเวลาถอยหลัง */
+.timer-container {
+    width: 100%;         
+    height: 3px;
+}
+
+.timer { 
+    height: 100%;        
+    width: 100%;
+    background-color: #4caf50; 
+    animation: time 3.5s linear forwards;
+}
+
+@keyframes time {
+    to {
+        width: 0%;
+    }
+}
+/* ------- */

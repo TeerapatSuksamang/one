@@ -1,0 +1,76 @@
+/* แบบตรงกลาง */
+/* 
+    HTML จะเป็น
+    <div class="toast fade show position-fixed we-toastt shadow bg-light">
+    position-fixed bottom-0 end-0 = เหมือนกับตะกร้า
+*/
+.we-toastt{
+    left: 50%;
+    transform: translateX(-50%);
+    animation: test 4s ease forwards;
+}
+
+@keyframes test {
+    0%{
+        top: -50%;
+        /* เริ่มอยู่เลยจอด้านบน */
+    }
+    10%{
+        top: 13%;
+        /* ลงมา นับจากชิดขอบบน 13% */
+    }
+    13%{
+        top: 10%;
+        /* กลับขึ้นไป 3% จะดูเหมือนเด้งขึ้น */
+    }
+    
+    87%{
+        top: 10%;
+    }
+    90%{
+        top: 13%;
+    }
+    100%{
+        top: -50%;
+    }
+}
+/* ------ */
+
+/* ปุ่มซ่อน */
+.we-hide{
+    opacity: 1;
+    animation: hide .3s forwards ease;
+}
+
+@keyframes hide {
+    0%{
+        top: 10%;
+    }
+    50%{
+        top: 13%;
+    }
+    100%{
+        top: -50%;
+    }
+}
+/* ------- */
+
+/* จับเวลาถอยหลัง (เหมือนเดิม) */
+.timer-container {
+    width: 100%;         
+    height: 3px;
+}
+
+.timer { 
+    height: 100%;        
+    width: 100%;
+    background-color: #4caf50; 
+    animation: time 3.5s linear forwards;
+}
+
+@keyframes time {
+    to {
+        width: 0%;
+    }
+}
+/* time */

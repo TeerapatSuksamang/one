@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>load</title>
+    <style>
+        body{
+            /* position: relative; */
+            padding: 0 !important;
+            margin: 0 !important;
+            /* width: 100%; */
+            height: 100%;
+            border: 1px solid red;
+        }
+        .load{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: none;
+            animation: b 2s;
+            animation-delay: 2s;
+        }
+        .text{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            color: #fff;
+            transform: translate(-50%, -50%);
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 1rem;
+            animation: a 2s;
+        }
+        
+        @keyframes a {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0) !important;
+            }
+        }
+
+        @keyframes b {
+            0%{
+                display: block;
+            }
+            100%{
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="load">
+        <div class="text">
+            <span>T</span>
+            <span>E</span>
+            <span>E</span>
+            <span>R</span>
+            <span>A</span>
+            <span>P</span>
+            <span>A</span>
+            <span>T</span>
+        </div>
+    </div>
+</body>
+</html>
