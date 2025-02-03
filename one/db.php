@@ -79,4 +79,10 @@
 
     
     // echo 'PHP Version: ' . phpversion();
+    
+
+    // -------
+    function fav_res($res_id){
+       include 'template/fav_res.php';
+    }
 ?>
